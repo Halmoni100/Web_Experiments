@@ -1,0 +1,312 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ===========
+Grid
+=========== */
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.col-1-3, .col-2-3, .grid {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.container, .grid {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.container {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.col-1-3 {
+	width: 33.33%;
+}
+
+.col-2-3 {
+	width: 66.66%;
+}
+
+.col-1-3, .col-2-3, .col-1-3-cont {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* ============
+Clearfix
+============ */
+
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+	clear: both;
+	*zoom: 1;
+}
+
+/* ===========
+Typography
+=========== */
+
+h1 {
+	font-size: 48px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	margin: 10px 0;
+	font-size: 28px;
+}
+h4 {
+	font-size: 18px;
+}
+p {
+	margin-botton: 10px;
+}
+
+/* ===========
+Primary Header
+=========== */
+
+header {
+	background: #f76526;
+	padding-left: 30px;
+	padding-right: 30px;
+	min-width: 1000px;
+}
+
+.logo-theme a {
+	color: #fff;
+	text-decoration: none;
+	float: left;
+}
+
+.logo {
+	padding: 20px 0;
+	font-size: 36px;
+	font-family: "Gloria Hallelujah";
+}
+
+.theme {
+	padding-bottom: 15px;
+}
+
+/* ===========
+Title
+=========== */
+
+.title {
+	padding: 30px 10px;
+	text-align: center;
+	color: #fff;
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		right top,
+		color-stop(0, #FFFF66),
+		color-stop(1, #F76526)
+	);
+	background-image: -o-linear-gradient(right, #FFFF66 0%, #F76526 100%);
+	background-image: -moz-linear-gradient(right, #FFFF66 0%, #F76526 100%);
+	background-image: -webkit-linear-gradient(right, #FFFF66 0%, #F76526 100%);
+	background-image: -ms-linear-gradient(right, #FFFF66 0%, #F76526 100%);
+	background-image: linear-gradient(to right, #FFFF66 0%, #F76526 100%);
+}
+
+
+
+/* ============
+Home
+============ */
+
+.smoothie-image {
+	height: 667px;
+	padding-top: 470px;
+}
+
+.advertise {
+	padding: 30px 15px;
+	background-color: #f76526;
+	border-radius: 10px;
+	height: 175px;
+	color: #fff;
+}
+
+.advertise a {
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	height: 100%;
+}
+
+#h3-1 {
+	margin-top: 35px;
+	position: relative;
+}
+
+#h3-2, #h3-3 {
+	margin-top: 40px;
+	position: relative;
+}
+
+.advertise h3, .advertise p {
+	text-align: center;
+}
+
+.advertise a:hover {
+	color: #ff6;
+}
+
+.col-home {
+	height: 100%;
+}
+
+#col-1 p {
+	margin-top: -25px
+}
+
+#col-2 p {
+	margin-top: -15px;
+}
+
+#col-3 p {
+	margin-top: -20px;
+}
+
+/* ============
+About Us
+============ */
+
+.person {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+.personal-description {
+	margin: 15px 0;
+	padding: 20px 20px 50px 20px;
+	border: 1px solid #9a9a9a;
+	border-radius: 10px;
+	background-color: #fff;
+}
+.spirit-animal img {
+	border-radius: 50%;
+	display: block;
+	margin-top: -50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.personal-image img {
+	border-radius: 15px;
+	border: 10px solid #f76526;
+	display: block;
+	margin: 25px auto;
+}
+
+/* ============
+Custom styles
+============ */
+
+body {
+	background: url(../images/Beach.jpg) no-repeat center center fixed; 
+  		-webkit-background-size: cover;
+ 		-moz-background-size: cover;
+ 		-o-background-size: cover;
+  	background-size: cover;
+	font: 400 16px/22px "Dosis", "Open Sans", 
+	"Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* ============
+Navigation
+============ */
+
+.nav {
+	float: right;
+	margin: 22px 0;
+	border: 3px solid #fff;
+	border-radius: 7px;
+	padding: 10px 10px;
+}
+
+.nav li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.nav a:hover {
+	color: #ff6;
+}
+
+/* ============
+footer
+============ */
+
+footer {
+	padding: 15px 30px;
+}

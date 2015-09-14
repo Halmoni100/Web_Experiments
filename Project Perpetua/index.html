@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Project Perpetua</title>
+		<link rel="stylesheet" href="assets/stylesheets/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+		<script src="assets/js/jquery-2.1.1.min.js"></script>
+		<script src="assets/js/TweenMax.min.js"></script>
+		<script src="assets/js/jquery.scrollmagic.min.js"></script>
+		<script src="assets/js/jquery.scrollmagic.debug.js"></script>
+		<script>
+			var controller;
+			$(document).ready(function($) {
+				controller = new ScrollMagic();
+			});
+		</script>
+	</head>
+	
+	<body>
+	
+		
+		
+		<section class="intro">
+			<div class="background panel1">
+				<div class="logo">
+					<span class="helper"></span>
+					<img src="assets/images/logo.jpg">
+				</div>
+				<div id="t1" class="trigger"></div>
+				<div id="t2" class="trigger"></div>
+				<div id="t3" class="trigger"></div>
+				<div id="t4" class="trigger"></div>
+				<div id="t5" class="trigger"></div>
+				<div class="background panel3">
+					<div class="quote" id="quote1">
+						<h3>"Many would agree that the ASO has helped us to "defy time" 
+						by transporting us into a special world that only their wonderful 
+						music can create."</h3>
+					</div>
+					<div class="quote" id="quote2">
+						<h3>"I could not ever imagine my life without music because music 
+						is a part of who I am, and the city of Atlanta would not be who 
+						it is today without the Atlanta Symphony Orchestra."</h3>
+					</div>
+					<div class="quote" id="quote3">
+						<h3>"We cannot let management deprive the ASO musicians of their 
+						right to share music in their own home."</h3>
+					</div>
+					<div class="quote" id="quote4">
+						<h3>"I hope the music never stops and that everyone can come 
+						together and support ASO and its musicians because it wouldn't 
+						truly be Atlanta without them."</h3>
+					</div>
+				</div>
+			</div>
+			<div class="background panel2"></div>
+			<script>
+
+				$(document).ready(function($) {
+				
+					var durationValueCache;
+					function getDuration () {
+ 						return durationValueCache;
+					}
+					function updateDuration (e) {
+  						durationValueCache = $(window).innerHeight();
+  						console.log(getDuration);
+					}
+					$(window).on("resize", updateDuration); // update the duration when the window size changes
+					$(window).triggerHandler("resize"); // set to initial value
+					
+					var pinVenue = new ScrollScene({triggerElement: "#t1",
+										duration: getDuration*5})
+									.setPin(".panel2")
+									.addTo(controller);
+									
+					pinVenue.addIndicators();
+
+					var pinQuote1 = new ScrollScene({triggerElement: "#t2",
+										duration: getDuration*4})
+									.setPin("#quote1")
+									.addTo(controller);
+					var pinQuote2 = new ScrollScene({triggerElement: "#t3",
+										duration: getDuration*4})
+									.setPin("#quote2")
+									.addTo(controller);
+					var pinQuote3 = new ScrollScene({triggerElement: "#t4",
+										duration: getDuration*4})
+									.setPin("#quote3")
+									.addTo(controller);
+					var pinQuote4 = new ScrollScene({triggerElement: "#t5",
+										duration: getDuration*4})
+									.setPin("#quote4")
+									.addTo(controller);
+				});
+			</script>
+		</section>
+		
+	</body>
+	
+	<footer>
+	</footer>
+		
+	
+</html>
